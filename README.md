@@ -57,7 +57,7 @@ npm run start:docker
 ### 6. Example queries to run
 ```shell
 query{
-	sumRewards(first:10){
+  sumRewards(first:10){
     nodes{
       id
       accountReward
