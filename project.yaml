@@ -1,5 +1,5 @@
 specVersion: 0.2.0
-name: sashabnk
+name: tarabukinivan
 version: 1.0.0
 description: ''
 repository: ''
@@ -14,8 +14,13 @@ dataSources:
     mapping:
       file: ./dist/index.js
       handlers:
+      - handler: handleSumRewarded
+        kind: substrate/EventHandler
+        filter:
+          module: staking
+          method: Rewarded
       - handler: handleStakingRewarded
         kind: substrate/EventHandler
         filter:
-          module: staking 
+          module: staking
           method: Rewarded
